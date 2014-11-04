@@ -1,0 +1,19 @@
+{
+  "name": "yahoo-news",
+  "version": "0.0.1",
+  "description": "A web-app that loads the last ten news articles from yahoo",
+  "main": "app/app.js",
+  "scripts": {
+    "test": ""
+  },
+  "keywords": [
+    "boss"
+  ],
+  "author": "Gabar Ewen",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^1.9.2",
+    "gulp": "^3.8.10",
+    "mocha": "^2.0.1"
+  }
+}
