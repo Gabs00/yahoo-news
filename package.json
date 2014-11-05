@@ -22,6 +22,11 @@
     "mocha": "^2.0.1"
   },
   "devDependencies": {
+    "gulp-concat": "^2.4.1",
+    "gulp-jshint": "^1.9.0",
+    "gulp-livereload": "^2.1.1",
+    "gulp-notify": "^2.0.0",
+    "gulp-zip": "^2.0.2",
     "karma-chrome-launcher": "^0.1.5",
     "karma-jasmine": "^0.2.3"
   }

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets"
+id="https://github.com/Gabs00/yahoo-news/tree/master/widget/yahoonews.wgt"
+version="0.1" width="300" height="200">
+  <name>yahoo-news</name>
+  <description>A web-app that loads the last ten news articles from yahoo</description>
+  <content src="index.html" />
+  <icon src="icon.ico" />
+  <access network="true" />
+  <author>Gabar Ewen</author>
+  <license>MIT</license>
+</widget>
