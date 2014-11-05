@@ -4,7 +4,7 @@
   "description": "A web-app that loads the last ten news articles from yahoo",
   "main": "app/app.js",
   "scripts": {
-    "test": ""
+    "test": "mocha test/spec.js"
   },
   "keywords": [
     "boss"

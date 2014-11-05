@@ -21,6 +21,6 @@
   ],
   "dependencies": {
     "bootstrap": "~3.3.0",
-    "require": "*"
+    "react": "~0.12.0"
   }
 }
