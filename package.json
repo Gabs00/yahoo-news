@@ -12,8 +12,8 @@
   "author": "Gabar Ewen",
   "license": "MIT",
   "dependencies": {
+    "w3cjs": "^0.1.25"
   },
-
   "devDependencies": {
     "chai": "^1.9.2",
     "gulp": "^3.8.10",
