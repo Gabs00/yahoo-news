@@ -20,12 +20,16 @@ module.exports = function(config) {
       'app/src/elem.js',
       'app/src/model.js',
       'app/src/app.js',
-      'test/*.js'
+      'test/*.js',
+      'dist/**/*.js',
+      'widget/**/*.js'
     ],
 
 
     // list of files to exclude
     exclude: [
+      'dist/assets/js/**/*',
+      'widget/assets/js/**/*'
     ],
 
 

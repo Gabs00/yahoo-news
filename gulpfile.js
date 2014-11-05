@@ -18,7 +18,8 @@ gulp.task('lib', function(){
   return gulp.src([
     'app/lib/**/*/bootstrap.min.js',
     'app/lib/**/*/jquery.min.js',
-    'app/lib/**/*/react.min.js']
+    'app/lib/**/*/react.min.js',
+    'app/lib/**/*/jquery.min.map']
     )
     .pipe(gulp.dest('dist/assets/js'))
     .pipe(gulp.dest('widget/assets/js'))
@@ -28,6 +29,7 @@ gulp.task('lib', function(){
 gulp.task('css', function(){
   return gulp.src([
     'app/lib/**/*/bootstrap.css',
+    'app/lib/**/*/bootstrap.css.map',
     'app/styles/main.css']
     )
     .pipe(gulp.dest('dist/assets/js'))
@@ -58,7 +60,7 @@ gulp.task('lint', function(){
 });
 
 gulp.task('dist', function(){
-  gulp.start('lint', 'test', 'lib');
+  gulp.start('lint', 'test', 'lib', 'css');
   gulp.src('app/src/**/*')
     .pipe(gulp.dest('dist/assets'))
     .pipe(gulp.dest('widget/assets'))
