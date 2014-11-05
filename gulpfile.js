@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var karma = require('karma').server;
 var jshint = require('gulp-jshint');
 var concat = require('gulp-concat');
-var livereload = require('gulp-livereload');
+var shell = require('gulp-shell');
 var notify = require('gulp-notify');
 var zip = require('gulp-zip');
 
@@ -59,11 +59,13 @@ gulp.task('lint', function(){
     .pipe(notify({message:'Finished linting files'}));
 });
 
-gulp.task('dist', function(){
-  gulp.start('lint', 'test', 'lib', 'css');
+gulp.task('src', function(){
   gulp.src('app/src/**/*')
     .pipe(gulp.dest('dist/assets'))
     .pipe(gulp.dest('widget/assets'))
-    .pipe(notify('finished moving src files'));
-  gulp.start('zip');
+    .pipe(notify({message:'finished moving src files'}))
+    .pipe(notify({message:'Run ./widget.sh to create the widget'}));
+});
+gulp.task('dist', function(){
+  gulp.start('lint', 'test', 'lib', 'css', 'src');
 });
