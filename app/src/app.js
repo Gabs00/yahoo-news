@@ -16,7 +16,7 @@ try { var g = window; } catch(e) { g = global; }
 
     var text = [
       { name:'title', value:article.title },
-      { name:'summary', alue: article.summary }
+      { name:'summary', value: article.summary }
     ];
 
     var imgsrc = article.getImgSrc();

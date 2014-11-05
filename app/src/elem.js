@@ -6,7 +6,7 @@ try { var g = window; } catch(e) { g = global; }
   if(global.App === undefined){
     global.App = {};
   }
-  
+
   if(global.$ === undefined){
     console.log('jquery not found');
     return;
@@ -32,7 +32,7 @@ try { var g = window; } catch(e) { g = global; }
       titleStyle = '<h3 class="well" >Story '+ messageStyle +'</h3>';
     } else {
       messageStyle = '<div>'+val+'</div>';
-      titleStyle = '<h3>Summary</h3> '+messageStyle;
+      titleStyle = '<h3>Summary</h3> '+ messageStyle;
     }
 
     var $title = $(titleStyle);
