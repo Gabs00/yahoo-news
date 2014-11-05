@@ -22,10 +22,12 @@ Create a client-side only web-app that gets the 10 latest news items from Yahoo 
   * Karma, Jasmin, Chai
     * Not yet added
 
+## Status:
+ * MVP Completed
+
 ## To Do
- * Complete MVP
  * Create elements to represent each article
+ * Research W3C
  * Set up gulp to build distributable copy
  * Karma setup
- * Research moar W3C
  * List Summary

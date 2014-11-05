@@ -46,11 +46,19 @@ try { var g = window; } catch(e) { g = global; }
       "link":"link"
     };
     Store.call(this, map);
+
+    if(this.link === undefined){
+      this.link = "#";
+    }
   };
 
   Article.prototype = Object.create(Store.prototype);
   Article.prototype.constructor = Article;
   Article.prototype.getImgSrc = function(){
+    if(this.imginfo === undefined){
+      this.imginfo = {};
+      this.imginfo = "#";
+    }
     return this.imginfo.url;
   };
 

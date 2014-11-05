@@ -20,7 +20,7 @@ try { var g = window; } catch(e) { g = global; }
     console.log(url);
     if(url === null){
       //Nothing to do
-      return false;
+      return;
     } else {
       return url[1]; //The match from the regex
     }
