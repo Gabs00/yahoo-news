@@ -17,10 +17,10 @@ Create a client-side only web-app that gets the 10 latest news items from Yahoo 
   * Also needed a good excuse to work with it
  * Jquery
   * Makes life easier, though, it may be removed once React is implemented
-  * Twitter BootStrap
-  * Gulp
-  * Karma, Jasmin, Chai
-    * Not yet added
+ * Twitter BootStrap
+ * Gulp
+ * Karma, Jasmin, Chai
+  * Not yet added
 
 ## Status:
  * MVP Completed

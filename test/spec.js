@@ -1,7 +1,5 @@
-var expect = require('chai').expect;
- require('../app/src/model');
 
- var App = global.App;
+ var App = App;
 
 /*
 ## Specs:

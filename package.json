@@ -4,7 +4,7 @@
   "description": "A web-app that loads the last ten news articles from yahoo",
   "main": "app/app.js",
   "scripts": {
-    "test": "mocha test/spec.js"
+    "test": "karma start"
   },
   "keywords": [
     "boss"
@@ -14,6 +14,15 @@
   "dependencies": {
     "chai": "^1.9.2",
     "gulp": "^3.8.10",
+    "karma": "^0.12.24",
+    "karma-chai": "^0.1.0",
+    "karma-cli": "0.0.4",
+    "karma-mocha": "^0.1.9",
+    "karma-phantomjs-launcher": "^0.1.4",
     "mocha": "^2.0.1"
+  },
+  "devDependencies": {
+    "karma-chrome-launcher": "^0.1.5",
+    "karma-jasmine": "^0.2.3"
   }
 }
