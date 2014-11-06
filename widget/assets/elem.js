@@ -30,7 +30,7 @@
     var $el = elem.$message(label);
 
     var messageStyle = '<small><em>'+message+'</em></small>';
-    var titleStyle = '<h3 class="well" >Story '+ messageStyle +'</h3>';
+    var titleStyle = '<h3 class="well" >'+ messageStyle +'</h3>';
 
     var $title = $(titleStyle);
 
@@ -42,10 +42,9 @@
   elem.$summary = function(label, message){
     var $el = elem.$message(label);
 
-    var messageStyle = '<div>'+message+'</div>';
-    var titleStyle = '<h3>Summary</h3> '+ messageStyle;
+    var messageStyle = '<p>'+message+'</p>';
 
-    var $title = $(titleStyle);
+    var $title = $(messageStyle);
 
     //sd is the div for title -> text, summary -> text pairs
     $el.append($title);
@@ -122,7 +121,16 @@
   };
 
   Entry.prototype.addStyles = function(){
-    this.$el.addClass('list-group-item');
+    //Main element
+    this.$el.addClass('list-group-item row');
+
+    //Main sizing
+    this.$el.addClass('col-xs-10 col-md-8');
+
+    //Main offset
+    this.$el.addClass('col-md-offset-2');
+
+    this.elems.$summary.addClass('lead');
     this.elems.$img.addClass('img-responsive');
   };
 

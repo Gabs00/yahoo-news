@@ -33,7 +33,11 @@ try { var g = window; } catch(e) { g = global; }
     var resp = items.value.items.slice(0,10);
     resp.forEach(function(obj, i){
       var post = new App.Article();
-
+      if(obj['media:content']){
+        if(obj.description.indexOf(obj['media:content'].url) !== -1){
+          delete obj['media:content'].url;
+        }
+      }
       post.init(obj);
       post.id = i;
       render(post);
