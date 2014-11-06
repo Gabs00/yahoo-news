@@ -15,9 +15,7 @@ try { var g = window; } catch(e) { g = global; }
     parse tag get the url
   */
   var parseTag = function(tag){
-    console.log(tag);
     var url = tag.match(/src\=\"(.+)\"/);
-    console.log(url);
     if(url === null){
       //Nothing to do
       return;
@@ -33,7 +31,6 @@ try { var g = window; } catch(e) { g = global; }
       var script = document.createElement('script');
       script.src = url;
       document.body.appendChild(script);
-      console.log(script);
     }
   };
 
