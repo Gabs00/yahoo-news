@@ -4,7 +4,7 @@ try { var g = window; } catch(e) { g = global; }
 
   //Where the list of articles will be displayed
   var $items = $('#news');
-
+  $('.loading').prop('hidden', true);
   //Will be moved to a seperated file
   var render = function(article){
     if($items.length >= 10){
@@ -22,6 +22,7 @@ try { var g = window; } catch(e) { g = global; }
     var $el = article.element.render();
 
     $items.append($el);
+
   };
 
   var url = "http://pipes.yahoo.com/pipes/pipe.run?_id=DqsF_ZG72xGLbes9l7okhQ&_render=json&_callback=";
@@ -42,13 +43,14 @@ try { var g = window; } catch(e) { g = global; }
       post.id = i;
       render(post);
     });
-
+    App.loading();
   };
 
 
   //Reload the application easily to get updates
   App.load = function(){
     $items.empty();
+    App.loading();
     App.jloader(url, "App.callback");
   };
 

@@ -153,5 +153,8 @@
 
   global.App.Entry = Entry;
 
+  global.App.loading = function(){
+    $('.loading').prop('hidden', !$('.loading').prop('hidden'));
+  };
 
 })(window);
